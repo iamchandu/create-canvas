@@ -1,7 +1,7 @@
 {
-  "name": "angular-editor-fabric-js",
-  "version": "2.0.0",
-  "description": "Drag and drop editor based on Fabricjs (Angular Cli)",
+  "name": "create-canvas",
+  "version": "1.0.0",
+  "description": "Create Canvas with drag and drop option.",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -13,21 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevoj/angular-editor-fabric-js"
+    "url": ""
   },
-  "author": "Leonardo Rico Guevara (https://github.com/kevoj)",
-  "keywords": [
-    "kitchensink",
-    "kitchensink-angular",
-    "canvas",
-    "angular",
-    "fabricjs",
-    "editor",
-    "images",
-    "fabric",
-    "fabricjs-angular",
-    "angular-fabric"
-  ],
+  "author": "Chandu",
+  "keywords": [],
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
