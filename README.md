@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-git clone 
+git clone https://gitlab.com/iamchandu.1992/create-canvas
 npm install
 ```
 ## Start
