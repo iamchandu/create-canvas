@@ -13,4 +13,12 @@ export class ApiService {
       responseType: 'json' 
    });
   }
+
+  getdataOfAll(){
+    return this.http.get('https://mamatapress.herokuapp.com/api/card/getNewNormalCards');
+  }
+
+  getJsonSVG(key):any{
+    return this.http.get('https://mamatapress.herokuapp.com/api/card/getCardSvgData/'+key);
+  }
 }

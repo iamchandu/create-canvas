@@ -1,8 +1,10 @@
-<div class="d-flex">
-  <div class="col-4" *ngFor="let item of data; let i=index">
+<div class="d-flex flex-row flex-wrap my-flex-container">
+  <div class="col-4 mb-3 mt-3" *ngFor="let item of data; let i=index">
         <div class="card">
-              <div class='card-body'>
-                    <img (click)="selecteditem(item.obj)" class="rounded img-fluid" src={{item.image}} alt="">
+              <div (click)="selecteditem(item.card_images[0].design_templates_json_id)" class='card-body'>
+                    <img src='https://mamata-card-low-res-images.s3.us-east-2.amazonaws.com/{{item.card_images[0].images[0]}}' class="img-thumbnail">
+                    <h5 class="text-center">{{item.card_name}}</h5>
+                    <p><mark class="text-dark"><i class="fa fa-inr" aria-hidden="true"></i> {{item.discount_price}} &nbsp;</mark> <del class="text-muted"><i class="fa fa-inr" aria-hidden="true"></i>{{item.actual_price}}</del> &nbsp;&nbsp; <i class="text-success">{{item.discount_percentage}}% off</i></p>
               </div>
         </div>
   </div>

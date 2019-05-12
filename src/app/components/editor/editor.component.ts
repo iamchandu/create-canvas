@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import 'fabric';
+import svgson,{stringify} from 'svgson';
 declare const fabric: any;
 
 @Component({
@@ -29,8 +30,8 @@ export class EditorComponent implements OnInit {
   private textString: string;
   private url: string = '';
   private size: any = {
-    width: 500,
-    height: 300
+    width: 1000,
+    height: 600
   };
 
   private json: any;
@@ -107,8 +108,8 @@ export class EditorComponent implements OnInit {
     // let canvasElement: any = document.getElementById('canvas');
     // console.log(canvasElement)
     // });
-    this.loadCanvasFromJSON();
-
+    //this.loadCanvasFromJSON();
+    this.loadSVGdata();
   }
 
 
@@ -585,6 +586,17 @@ export class EditorComponent implements OnInit {
     this.textEditor = false;
     this.imageEditor = false;
     this.figureEditor = false;
+  }
+
+  loadSVGdata() {
+    let self = this;
+    var str = stringify(JSON.parse(localStorage.getItem('Kanvas')));
+    fabric.loadSVGFromString(str, function(objects, options) {
+      self.canvas.add.apply(self.canvas, objects).renderAll();
+    });
+    // fabric.loadSVGFromURL(localStorage.getItem('Kanvas'), function(objects, options) {
+    //   self.canvas.add.apply(self.canvas, objects).renderAll();
+    // });
   }
 
 
